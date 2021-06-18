@@ -1,28 +1,28 @@
 <template>
-  <nav class="navbar navbar-expand-xl border-bottom bg-light navbar-light" id="navbar">
+  <nav class="navbar navbar-expand-xl sticky-top border-bottom bg-light navbar-light" id="navbar">
     <div class="container">
-      <img src="@/assets/img/Frame.png" class="me-5" style="max-width: 150px;">
+      <img src="@/assets/img/Frame.png" alt="Logo Compost All" class="me-5" style="max-width: 150px;">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <li class="nav-item mx-3">
-            <a class="nav-link" href="#">Accueil</a>
+            <a class="nav-link text-dark" href="#">Accueil</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link" href="#">Le Projet</a>
+            <a class="nav-link text-dark" href="#projet">Le Projet</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link" href="#">À Propos</a>
+            <a class="nav-link text-dark" href="#about">À Propos</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link text-dark" href="#footer">Contact</a>
           </li>
         </ul>
 
         <button class="btn btn-light me-3" type="submit">Login</button>
-        <button class="btn btn-dark" type="submit">Sign up</button>
+        <button class="btn btn-sign-up text-white" type="submit">Sign up</button>
       </div>
     </div>
   </nav>
@@ -54,9 +54,8 @@ export default {
       font-weight: bold;
   }
 
-  .btn-dark{
-      background-color: rgb(78, 78, 78);
-      border-color: rgb(78, 78, 78);
+  .btn-sign-up{
+      background-color: #96e6b3;
       font-weight: bold;
   }
 </style>
