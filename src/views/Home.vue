@@ -1,20 +1,23 @@
 <template>
-  <div id="app">
-      <Navigation />
+    <section id="content">
       <router-view></router-view>
-      <Footer />
-  </div>
+      <Hero />
+      <LeProjet />
+      <APropos />
+    </section>
 </template>
 
 <script>
-  import Navigation from './components/Navigation.vue'
-  import Footer from './components/Footer.vue'
+  import Hero from '@/components/Hero.vue'
+  import LeProjet from '@/components/LeProjet.vue'
+  import APropos from '@/components/APropos.vue'
 
   export default {
-    name: 'App',
+    name: 'Home',
     components: {
-      Navigation,
-      Footer,
+      Hero,
+      LeProjet,
+      APropos
     }
   }
 </script>

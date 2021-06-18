@@ -21,7 +21,7 @@
         </div>
 
         <!-- FOOTER SUR MOBILE -->
-        <div class="container d-md-none">
+        <div class="container d-md-none" id="footer-mobile">
             <div class="row">
                 <div class="col">
                     <h2 class="text-start text-light">Agis pour l’environnement, <br> Souscris à notre abonnement ! </h2>
@@ -71,6 +71,12 @@
         font-size: 1.5em;
         line-height: normal;
         margin-left: -.1em;
+    }
+
+    @media (max-width: 576px) {
+        #footer-mobile h2 {
+            font-size: 1.3em;
+        }
     }
     
 </style>

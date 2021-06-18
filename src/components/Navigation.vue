@@ -21,21 +21,17 @@
           </li>
         </ul>
 
-        <button class="btn btn-light me-3" type="submit">Login</button>
-        <button class="btn btn-sign-up text-white" type="submit">Sign up</button>
+        <router-link to="/login"><button class="btn btn-light me-3" type="submit">Login</button></router-link>
+        <router-link to="/sign-up"><button class="btn btn-sign-up text-white" type="submit">Sign up</button></router-link>
       </div>
     </div>
   </nav>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      mainProps: { blank: true, width: 75, height: 75, class: "m1" },
-    };
-  },
-};
+  export default {
+    name: 'Header'
+  }
 </script>
 
 <style scoped>

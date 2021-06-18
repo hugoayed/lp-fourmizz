@@ -44,7 +44,7 @@
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionProjet">
-                    <div class="accordion-body fs-4">
+                    <div class="accordion-body">
                         Nous vous accompagnons étape par étape dans cette nouvelle aventure écologique afin de travailler ensemble sur vos besoins.
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionProjet">
-                    <div class="accordion-body fs-4">
+                    <div class="accordion-body ">
                         Nous récupérons vos déchets dans une poubelle CompostAll, dans des sacs plastiques transparents afin de faciliter le tri.
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionProjet">
-                    <div class="accordion-body fs-4">
+                    <div class="accordion-body ">
                         Une fois vos déchets récupérés dans une des poubelles CompostAll, nous nous occupons de trier les déchets dans notre centre afin qu’il
                     finisse en compost ou bio-carburant.
                     </div>
@@ -81,7 +81,7 @@
                     </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionProjet">
-                    <div class="accordion-body fs-4">
+                    <div class="accordion-body ">
                         Une fois votre livraison validée, vous récupérerez des points sur votre compte partenaire et vous pouvez bénéficier d’avantage
                     avec vos partenaires préférés.
                     </div>
@@ -97,25 +97,26 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 chiffres-cles">
             <div class="col col-md text-start">
                 <h3>20 Tonnes</h3>
-                <p class="fs-5">De nourritures gaspillées chaque minute en France</p>
+                <p class="">De nourritures gaspillées chaque minute en France</p>
             </div>
             <div class="col col-md text-start">
                 <h3>10 Millions</h3>
-                <p class="fs-5">De tonnes de déchets alimentaires en France</p>
+                <p class="">De tonnes de déchets alimentaires en France</p>
             </div>
             <div class="col col-md text-start">
                 <h3>400 000 Tonnes</h3>
-                <p class="fs-5">De déchets alimentaires dans la restauration</p>
+                <p class="">De déchets alimentaires dans la restauration</p>
             </div>
             <div class="col col-md text-start">
                 <h3>1 Repas</h3>
-                <p class="fs-5">Par personne par semaine gaspillé</p>
+                <p class="">Par personne par semaine gaspillé</p>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+
     #projet {
         margin-top: 3em;
     }
@@ -129,7 +130,6 @@
 
     .fonctionnement {
         text-align: left;
-        font-size: 1.2em;
         margin-bottom: 3em;
     }
 
@@ -146,6 +146,7 @@
     #accordionProjet button {
         background-color: #fbfbfb;
         color: #96e6b3;
+        font-size: 0.8em !important;
     }
     .accordion-item {
         border: none;
@@ -160,18 +161,41 @@
 
     #chiffres-cles {
         text-align: left;
-        /* max-width: 90%; */
         margin: auto;
         margin-bottom: 3em;
     }
 
-    /* #chiffres-cles p {
-        font-size: 1.2em;
-    } */
-
     .chiffres-cles h3 {
         font-weight: bold;
         color: #96e6b3;
-        font-size: 2em;
+    }
+
+    @media (max-width: 576px) {
+        #projet-title {
+            color: #717171;
+            font-weight: bold;
+            font-size: 1.8em;
+            margin: 1em 0;
+        }
+
+        #accordionProjet #accordion-body {
+            font-size: 0.5em !important;
+            color: red !important;
+        }
+        
+        #chiffres-title{
+            font-size: 1.8em;
+        }
+
+        #chiffre-cles h3 {
+            font-size: 0.2em !important;
+        }
     }
 </style>
+
+<script>
+
+export default {
+    name: 'LeProjet'
+}
+</script>

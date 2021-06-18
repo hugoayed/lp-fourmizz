@@ -11,7 +11,7 @@
                 <h2>Qui sommes-nous ?</h2>
                 <p>Nous sommes une petite équipe voulant améliorer le monde de demain.</p>
             </div>
-            <div class="col">
+            <div class="col ">
                 <img src="../assets/img/compost-all-qui-sommes-nous.png" alt="Compost All - camion de livraison">
             </div>
         </div>
@@ -45,18 +45,11 @@
             <div class="row" id="explainer-video">
                 <div class="col">
                     <h1 class="text-center">Explainer vidéo</h1>
-                    <!-- <b-img
-                        v-bind="mainProps"
-                        blank-color="rgb(139, 139, 139)"
-                        width="600px"
-                        height="350"
-                        alt="HEX color image"
-                    ></b-img> -->
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <iframe width="720px" height="450px" src="https://www.youtube.com/embed/RTptiP2QhN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="col col-12 ratio ratio-16x9">
+                    <iframe class="" src="https://www.youtube.com/embed/RTptiP2QhN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -83,10 +76,6 @@
         color: #96e6b3;
     }
 
-    #about p {
-        font-size: 1.2em;
-    }
-
     #about img {
         width: 70%;
     }
@@ -107,14 +96,28 @@
     .explainer-video iframe {
         min-height: 200px;
     }
+
+    @media (max-width: 576px) {
+        #about h1 {
+            font-size: 1.8em;
+        }
+
+        #about h2 {
+            font-size: 1em;
+        }
+
+         #about p {
+             font-size: 0.9em;
+         }
+
+        #about img {
+            width: 90%;
+        }
+    }
 </style>
 
 <script>
     export default {
-    data() {
-        return {
-        mainProps: { blank: true, width: 75, height: 75, class: "m1" },
-        };
-    },
+        
     };
 </script>
