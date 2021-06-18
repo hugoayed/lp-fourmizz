@@ -2,11 +2,11 @@
     <div class="">
         <div class="login-page">
             <div class="form">
-                <form class="login-form">
-                <input type="email" placeholder="Adresse e-mail"/>
+                <form class="register-form">
+                <input type="email" placeholder="Adressssse e-mail"/>
                 <input type="password" placeholder="Mot de passe"/>
-                <button>Se connecter</button>
-                <p class="message"> Pas de compte ? <router-link to="/sign-up"> Créez-en un !</router-link> </p>
+                <button>Créer</button>
+                <p class="message"> Vous avez déjà un compte ? <router-link to="/login"> Connectez-vous !</router-link> </p>
                 </form>
             </div>
         </div>
@@ -67,9 +67,6 @@
 .form .message a {
   color: #4CAF50;
   text-decoration: none;
-}
-.form .register-form {
-  display: none;
 }
 .container {
   position: relative;

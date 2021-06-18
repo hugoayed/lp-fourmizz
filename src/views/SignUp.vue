@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <router-view></router-view>
-        <h1 class="mt-4">Connectez-vous</h1>
-        <FormLogin />
+        <h1 class="mt-4">Inscrivez-vous</h1>
+        <FormSignUp />
         
     </div>
     
@@ -10,12 +10,12 @@
 
 <script>
 
-    import FormLogin from '@/components/FormLogin.vue';
+    import FormSignUp from '@/components/FormSignUp.vue';
 
     export default {
-        name: 'Login',
+        name: 'SignUp',
         components: {
-            FormLogin,
+            FormSignUp,
         }
     }
 </script>

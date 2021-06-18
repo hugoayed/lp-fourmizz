@@ -18,12 +18,26 @@ const routes = [
             default: () => import(/* webpackChunkName: "Mentionslegales" */ '@/views/Login.vue'),
         },
     },
+    {
+        path:'/sign-up',
+        name: 'SignUp',
+        components: {
+            default: () => import(/* webpackChunkName: "Mentionslegales" */ '@/views/SignUp.vue'),
+        },
+    },
 ]
 
 const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
-    routes
+    routes,
+    scrollBehavior: function (to) {
+        if (to.hash) {
+          return {
+            selector: to.hash
+          }
+        }
+    },
 })
 
 export default router

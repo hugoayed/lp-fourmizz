@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-xl sticky-top border-bottom bg-light navbar-light" id="navbar">
+  <nav class="navbar navbar-expand-xl sticky-top border-bottom " id="navbar">
     <div class="container">
       <img src="@/assets/img/Frame.png" alt="Logo Compost All" class="me-5" style="max-width: 150px;">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,16 +8,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <li class="nav-item mx-3">
-            <a class="nav-link text-dark" href="#">Accueil</a>
+            <router-link to="/" class="nav-link text-dark">Accueil</router-link>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link text-dark" href="#projet">Le Projet</a>
+            <router-link to="/#projet" class="nav-link text-dark">Le Projet</router-link>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link text-dark" href="#about">À Propos</a>
+            <router-link to="/#about" class="nav-link text-dark">À Propos</router-link>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link text-dark" href="#footer">Contact</a>
+            <router-link to="#footer" class="nav-link text-dark">Contact</router-link>
           </li>
         </ul>
 
