@@ -4,11 +4,11 @@
         <div class="container d-none d-md-block">
             <div class="row d-flex align-items-center">
                 <div class="col text-start">
-                    <img class="mb-3" src="..\assets\img\logo-compost-all-white.png" alt="Logo Compost All blanc" style="max-width: 200px;">
+                    <img class="mb-3" src="../assets/img/logo-compost-all-white.png" alt="Logo Compost All blanc" style="max-width: 200px;">
                     <p class="text-start text-light">Copyright © 2021 Fourmizz <br> All rights reserved</p>
-                    <a href="https://www.linkedin.com/company/compostall"><small><img src="..\assets\img\compost-all-linkedin.png" alt="Logo Linkedin"></small></a> 
-                    <a href="https://www.facebook.com/CompostAll"><small><img src="..\assets\img\compost-all-facebook.png" alt="Logo Facebook" class="mx-4"></small></a> 
-                    <a href="https://www.instagram.com/compostall/"><small><img src="..\assets\img\compost-all-instagram.png" alt="Logo Instagram"></small></a> 
+                    <a href="https://www.linkedin.com/company/compostall"><small><img src="../assets/img/compost-all-linkedin.png" alt="Logo Linkedin"></small></a> 
+                    <a href="https://www.facebook.com/CompostAll"><small><img src="../assets/img/compost-all-facebook.png" alt="Logo Facebook" class="mx-4"></small></a> 
+                    <a href="https://www.instagram.com/compostall/"><small><img src="../assets/img/compost-all-instagram.png" alt="Logo Instagram"></small></a> 
                 </div>
                 <div class="col">
                     <h2 class="text-end text-light">Agis pour l’environnement, <br> Souscris à notre abonnement ! </h2>
@@ -33,9 +33,9 @@
             </div>
             <div class="row mt-5">
                 <div class="col">
-                    <a href="https://www.linkedin.com/company/compostall"><small><img src="..\assets\img\compost-all-linkedin.png" alt="Logo Linkedin"></small></a> 
-                    <a href="https://www.facebook.com/CompostAll"><small><img src="..\assets\img\compost-all-facebook.png" alt="Logo Facebook" class="mx-4"></small></a> 
-                    <a href="https://www.instagram.com/compostall/"><small><img src="..\assets\img\compost-all-instagram.png" alt="Logo Instagram"></small></a> 
+                    <a href="https://www.linkedin.com/company/compostall"><small><img src="../assets/img/compost-all-linkedin.png" alt="Logo Linkedin"></small></a> 
+                    <a href="https://www.facebook.com/CompostAll"><small><img src="../assets/img/compost-all-facebook.png" alt="Logo Facebook" class="mx-4"></small></a> 
+                    <a href="https://www.instagram.com/compostall/"><small><img src="../assets/img/compost-all-instagram.png" alt="Logo Instagram"></small></a> 
                 </div>
             </div>
             <div class="row mt-5">

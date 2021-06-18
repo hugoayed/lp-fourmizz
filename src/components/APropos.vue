@@ -12,13 +12,13 @@
                 <p>Nous sommes une petite équipe voulant améliorer le monde de demain.</p>
             </div>
             <div class="col">
-                <img src="..\assets\img\compost-all-qui-sommes-nous.png" alt="Compost All - camion de livraison">
+                <img src="../assets/img/compost-all-qui-sommes-nous.png" alt="Compost All - camion de livraison">
             </div>
         </div>
 
         <div class="row d-flex align-items-center">
             <div class="col">
-                <img src="..\assets\img\compost-all-notre-mission.png" alt="Compost All - tracteur avec une cargaison de fruits et légumes">
+                <img src="../assets/img/compost-all-notre-mission.png" alt="Compost All - tracteur avec une cargaison de fruits et légumes">
             </div>
             <div class="col col-md-7 ">
                 <h2 class="text-end">Notre mission</h2>
@@ -37,7 +37,7 @@
                 </p>
             </div>
             <div class="col">
-                <img src="..\assets\img\compost-all-nos-valeurs.png" alt="Compost All - femme avec dees fruits et légumes">
+                <img src="../assets/img/compost-all-nos-valeurs.png" alt="Compost All - femme avec dees fruits et légumes">
             </div>
         </div>
 

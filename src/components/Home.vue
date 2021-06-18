@@ -24,7 +24,7 @@
                         height="350"
                         alt="HEX color image"
                     ></b-img> -->
-                    <img src="..\assets\img\compost-all-hero.png" alt="Compost All - illustration avec des fruits et légumes">
+                    <img src="../assets/img/compost-all-hero.png" alt="Compost All - illustration avec des fruits et légumes">
                 </div>
             </div>
             <div class="row">
