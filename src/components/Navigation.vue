@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <li class="nav-item mx-3">
-            <router-link to="/" class="nav-link text-dark">Accueil</router-link>
+            <router-link to="/#hero" class="nav-link text-dark">Accueil</router-link>
           </li>
           <li class="nav-item mx-3">
             <router-link to="/#projet" class="nav-link text-dark">Le Projet</router-link>

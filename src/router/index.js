@@ -25,6 +25,13 @@ const routes = [
             default: () => import(/* webpackChunkName: "Mentionslegales" */ '@/views/SignUp.vue'),
         },
     },
+    {
+        path:'/mentions-legales',
+        name: 'MentionsLegales',
+        components: {
+            default: () => import(/* webpackChunkName: "Mentionslegales" */ '@/views/MentionsLegales.vue'),
+        },
+    },
 ]
 
 const router = new VueRouter({
