@@ -73,6 +73,10 @@
         margin-left: -.1em;
     }
 
+    #footer .btn-envoi:hover {
+        background-color: #21e468;
+    }
+
     @media (max-width: 576px) {
         #footer-mobile h2 {
             font-size: 1.3em;

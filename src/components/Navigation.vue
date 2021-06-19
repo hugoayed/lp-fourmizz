@@ -45,6 +45,11 @@
     color: black;
   }
 
+  .nav-link:hover {
+    margin: 1.5% 0;
+    border-bottom: 2px solid #96e6b3;
+  }
+
   .btn-light {
       background-color: rgb(216, 216, 216);
       font-weight: bold;
@@ -53,5 +58,9 @@
   .btn-sign-up{
       background-color: #96e6b3;
       font-weight: bold;
+  }
+
+  .btn-sign-up:hover{
+      background-color: #21e468;
   }
 </style>

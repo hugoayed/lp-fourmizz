@@ -65,6 +65,10 @@
         margin-left: -.1em;
     }
 
+    #hero .btn-envoi:hover {
+        background-color: #21e468;
+    }
+
     @media (max-width: 576px) {
          #hero-email {
             background-color: #fff;
