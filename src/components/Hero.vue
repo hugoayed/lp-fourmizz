@@ -16,12 +16,19 @@
                 </div>
                 <div class="row ">
                     <div class="col-xl-8 col-md-12">
-                        <form action="" class="text-start my-5">
-                            <input class="align-middle w-auto fs-4" type="email" id="hero-email" placeholder="Adresse mail">
+                        <form action="" class="text-start my-5" @submit.prevent="sendEmail">
+                            <input class="align-middle w-auto fs-4" type="email" id="hero-email" placeholder="Adresse mail" name="user_email">
                             <button class="btn align-middle fw-bold btn-envoi" type="submit">Envoyer</button>
                         </form>
                     </div>
                 </div>
+                <!-- <form class="contact-form" @submit.prevent="sendEmail">
+                    <label>Name</label>
+                    <input type="text" name="user_name">
+                    <label>Email</label>
+                    <input type="email" name="user_email">
+                    <input type="submit" value="Send">
+                </form> -->
             </div>
         </div>  
     </section>
@@ -85,8 +92,18 @@
 </style>
 
 <script>
+import emailjs from 'emailjs-com'
 export default {
-
+    methods: {
+        sendEmail: (e) => {
+        emailjs.sendForm('service_c2h1jrf', 'contact_form', e.target, 'user_ekTn8dEAYOfMMVPy0YHrW')
+            .then((result) => {
+                alert('Merci d\'avoir souscrit à notre newsletter !', result.status, result.text);
+            }, (error) => {
+                alert('Une erreur survenue, réessayez.', error);
+            });
+        }
+    },
     name: 'Hero'
 };
 </script>
