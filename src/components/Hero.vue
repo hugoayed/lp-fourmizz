@@ -40,12 +40,12 @@
                 Envoyer
               </button>
             </form>
-            ***** TEST ***** <br>
+            <!-- ***** TEST ***** <br>
             <a target="_blank" href="http://eepurl.com/hBHZlb">
               <button class="btn text-start fw-bold btn-envoi">
                 S'abonner à la newsletter
               </button>
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
