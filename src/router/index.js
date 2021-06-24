@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import firebase from 'firebase';
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,16 @@ const routes = [
             default: () => import(/* webpackChunkName: "Mentionslegales" */ '@/views/MentionsLegales.vue'),
         },
     },
+    {
+        path: '/dashboard',
+        name: 'Dashboard',
+        components: {
+            default: () => import(/* webpackChunkName: "DashboardView" */ '@/views/DashboardView.vue'),
+        },
+        meta: {
+            authRequired: true,
+        },
+    },
 ]
 
 const router = new VueRouter({
@@ -46,5 +57,20 @@ const router = new VueRouter({
         }
     },
 })
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(record => record.meta.authRequired)) {
+        if (firebase.auth().currentUser) {
+        next();
+        } else {
+        alert('You must be logged in to see this page');
+        next({
+            path: '/',
+        });
+        }
+    } else {
+        next();
+    }
+});
 
 export default router

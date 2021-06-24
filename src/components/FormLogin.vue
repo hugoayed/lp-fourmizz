@@ -2,10 +2,10 @@
     <div class="">
         <div class="login-page">
             <div class="form">
-                <form class="login-form">
-                <input type="email" placeholder="Adresse e-mail"/>
-                <input type="password" placeholder="Mot de passe"/>
-                <button>Se connecter</button>
+                <form class="login-form" @submit.prevent="login">
+                <input type="email" placeholder="Adresse e-mail" v-model="email"/>
+                <input type="password" placeholder="Mot de passe" v-model="password"/>
+                <button type="submit">Se connecter</button>
                 <p class="message"> Pas de compte ? <router-link to="/sign-up"> Créez-en un !</router-link> </p>
                 </form>
             </div>
@@ -117,7 +117,23 @@ body {
 </style>
 
 <script>
-    // export default{
-    //     name: 'Login'
-    // }
+import firebase from 'firebase';
+
+  export default{
+      name: 'Login',
+      methods: {
+        login() {
+          firebase
+            .auth()
+            .signInWithEmailAndPassword(this.email, this.password)
+            .then(() => {
+              alert('Successfully logged in');
+              this.$router.push('/dashboard');
+            })
+            .catch(error => {
+              alert(error.message);
+            });
+        },
+      },
+    }
 </script>

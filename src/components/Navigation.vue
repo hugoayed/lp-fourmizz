@@ -19,6 +19,8 @@
           <li class="nav-item mx-3">
             <router-link to="#footer" class="nav-link text-dark">Contact</router-link>
           </li>
+          <li class="nav-item mx-3"><router-link to="/dashboard" class="nav-link text-dark">Dashboard</router-link></li>
+          <li class="nav-item mx-3"><button @click="logout">Log out</button></li>
         </ul>
 
         <router-link to="/login"><button class="btn btn-light me-3" type="submit">Login</button></router-link>
@@ -29,8 +31,25 @@
 </template>
 
 <script>
+  import firebase from 'firebase';
+  import "firebase/auth";
   export default {
-    name: 'Header'
+    name: 'Header',
+    methods: {
+      logout() {
+        firebase
+          .auth()
+          .signOut()
+          .then(() => {
+            alert('Successfully logged out');
+            this.$router.push('/');
+          })
+          .catch(error => {
+            alert(error.message);
+            this.$router.push('/');
+          });
+      },
+    },
   }
 </script>
 

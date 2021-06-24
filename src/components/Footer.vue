@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col">
                     <h2 class="text-start text-light">Agis pour l’environnement, <br> Souscris à notre abonnement ! </h2>
-                    <form action="" id="hero-form" class="d-flex justify-content-start mt-4" @submit.prevent="sendEmail">
+                    <form action="" id="hero-form-mobile" class="d-flex justify-content-start mt-4" @submit.prevent="sendEmail">
                         <input class="align-middle w-75 fs-4 email"  type="email" placeholder="Adresse mail" name="user_email" autocomplete="off">
                         <button class="btn align-middle fw-bold btn-envoi" type="submit">Envoyer</button>
                     </form>
