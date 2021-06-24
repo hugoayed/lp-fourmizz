@@ -20,7 +20,7 @@
             <router-link to="#footer" class="nav-link text-dark">Contact</router-link>
           </li>
           <li class="nav-item mx-3"><router-link to="/dashboard" class="nav-link text-dark">Dashboard</router-link></li>
-          <li class="nav-item mx-3"><button @click="logout">Log out</button></li>
+          <li class="nav-item mx-3" ><button @click="logout">Log out</button></li>
         </ul>
 
         <router-link to="/login"><button class="btn btn-light me-3" type="submit">Login</button></router-link>

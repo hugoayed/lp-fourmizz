@@ -5,7 +5,7 @@
                 <form class="login-form" @submit.prevent="login">
                 <input type="email" placeholder="Adresse e-mail" v-model="email"/>
                 <input type="password" placeholder="Mot de passe" v-model="password"/>
-                <button type="submit">Se connecter</button>
+                <button type="submit">Connexion</button>
                 <p class="message"> Pas de compte ? <router-link to="/sign-up"> Créez-en un !</router-link> </p>
                 </form>
             </div>
