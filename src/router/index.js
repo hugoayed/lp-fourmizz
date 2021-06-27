@@ -16,14 +16,14 @@ const routes = [
         path:'/login',
         name: 'Login',
         components: {
-            default: () => import(/* webpackChunkName: "Mentionslegales" */ '@/views/Login.vue'),
+            default: () => import(/* webpackChunkName: "login" */ '@/views/Login.vue'),
         },
     },
     {
         path:'/sign-up',
         name: 'SignUp',
         components: {
-            default: () => import(/* webpackChunkName: "Mentionslegales" */ '@/views/SignUp.vue'),
+            default: () => import(/* webpackChunkName: "SignUp" */ '@/views/SignUp.vue'),
         },
     },
     {
@@ -37,10 +37,10 @@ const routes = [
         path: '/dashboard',
         name: 'Dashboard',
         components: {
-            default: () => import(/* webpackChunkName: "DashboardView" */ '@/views/DashboardView.vue'),
+            default: () => import(/* webpackChunkName: "Dashboard" */ '@/views/Dashboard.vue'),
         },
         meta: {
-            authRequired: true,
+            requiresAuth: true,
         },
     },
 ]
@@ -59,15 +59,11 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    if (to.matched.some(record => record.meta.authRequired)) {
-        if (firebase.auth().currentUser) {
-        next();
-        } else {
-        alert('You must be logged in to see this page');
-        next({
-            path: '/',
-        });
-        }
+    const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+    const isAuthenticated = firebase.auth().currentUser;
+    if(requiresAuth && !isAuthenticated) {
+        alert("connexion requise");
+        next("/login");
     } else {
         next();
     }
