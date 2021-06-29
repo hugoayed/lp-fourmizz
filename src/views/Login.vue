@@ -4,16 +4,22 @@
     <div class="form">
       <div class="danger" v-if="error">{{ error.message }}</div>
       <form class="login-form" @submit.prevent="submit">
-        <input type="email" placeholder="Adresse e-mail" v-model="email" />
+        <input
+          type="email"
+          placeholder="Adresse e-mail"
+          v-model="email"
+          required
+        />
         <input
           type="password"
           placeholder="Mot de passe"
           v-model="password"
+          required
         />
         <button type="submit">Connexion</button>
         <p class="message">
           Pas de compte ?
-          <router-link to="/sign-up"> Créez-en un !</router-link>
+          <router-link to="/register"> Créez-en un !</router-link>
         </p>
       </form>
     </div>
@@ -33,7 +39,7 @@
   z-index: 1;
   background: #ffffff;
   max-width: 360px;
-  margin: 0 auto 100px;
+  margin: 0 auto 100px ;
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -66,7 +72,7 @@
 .form button:hover,
 .form button:active,
 .form button:focus {
-  background: #79db9d;
+  background: #21e468;
 }
 .form .message {
   margin: 15px 0 0;
@@ -133,20 +139,22 @@ export default {
   methods: {
     async submit() {
       try {
-        const val = await firebase.auth().signInWithEmailAndPassword(this.email, this.password);
-        console.log(val);
-        this.$router.replace({name: "Dashboard"});
+        await firebase
+          .auth()
+          .signInWithEmailAndPassword(this.email, this.password);
+        this.$router.replace({ name: "Dashboard" });
+        // window.location.href = "https://www.dashboard.compostall.fr";
       } catch (error) {
         console.log(error);
       }
-    }
+    },
   },
   data() {
     return {
-      email: '',
-      password: '',
-      error: '',
-    }
-  }
+      email: "",
+      password: "",
+      error: "",
+    };
+  },
 };
 </script>

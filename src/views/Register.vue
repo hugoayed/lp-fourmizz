@@ -39,7 +39,7 @@
   z-index: 1;
   background: #ffffff;
   max-width: 360px;
-  margin: 0 auto 100px;
+  margin: 0 auto 183px !important;
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -72,7 +72,7 @@
 .form button:hover,
 .form button:active,
 .form button:focus {
-  background: #79db9d;
+  background: #21e468;
 }
 .form .message {
   margin: 15px 0 0;
@@ -137,9 +137,11 @@ export default {
   methods: {
     submit() {
       try {
-        const user = firebase.auth().createUserWithEmailAndPassword(this.email, this.password);
+        const user = firebase
+          .auth()
+          .createUserWithEmailAndPassword(this.email, this.password);
         console.log(user);
-        this.$router.replace({name: "Dashboard"});
+        this.$router.replace({ name: "Dashboard" });
       } catch (error) {
         console.log(error);
       }

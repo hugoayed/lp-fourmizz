@@ -2,34 +2,51 @@
     <div class="container px-4" id="projet">
         <div class="row">
             <div class="col">
-                <h1 id="projet-title">Comment ça marche ?</h1>
+                <h1 id="projet-title" class="text-dark">Comment ça marche ?</h1>
             </div>
         </div>
 
         <!-- ETAPES VISIBLES UNIQUEMENT SUR GRAND ECRAN -->
-
         <div class="container d-none d-md-block">
-            <div class="row fonctionnement">
-                <div class="col-xl-6">
-                    <h2>1. Accompagnement</h2>
-                    <p>Nous vous accompagnons étape par étape dans cette nouvelle aventure écologique afin de travailler ensemble sur vos besoins. </p>
+            <div class="row">
+                <div class="col-xl-4 text-center">
+                    <div class="square impair">
+                        <h2 class="chiffre">1</h2> 
+                        <h2 class="my-5">Accompagnement</h2>
+                        <p>Nous vous accompagnons étape par étape dans cette nouvelle aventure écologique afin de travailler ensemble sur vos besoins. </p>
+                    </div>
                 </div>
-                <div class="col-xl-6 ms-auto">
-                    <h2>2.Tri des déchets</h2>
-                    <p>Nous récupérons vos déchets dans une poubelle CompostAll, dans des sacs plastiques transparents afin de faciliter le tri.</p>
+                
+                <div class="col-xl-4 text-center" style="margin-top: 3em">
+                    <img src="@/assets/img/trait-1.png" alt="">
+                </div>
+                <div class="col-xl-4 text-center" style="margin-top: 8em">
+                    <div class="square pair">
+                        <h2 class="chiffre">2</h2> 
+                        <h2 class="my-5">Tri des déchets</h2>
+                        <p>Nous récupérons vos déchets dans une poubelle CompostAll, dans des sacs plastiques transparents afin de faciliter le tri. </p>
+                    </div>
                 </div>
             </div>
-
-            <div class="row fonctionnement">
-                <div class="col-xl-6">
-                    <h2>3. Recyclage</h2>
-                    <p>Une fois vos déchets récupérés dans une des poubelles CompostAll, nous nous occupons de trier les déchets dans notre centre afin qu’il
-                        finisse en compost ou bio-carburant.</p>
+            <div class="row">
+                <div class="col-xl-4 text-center">
+                    <img src="@/assets/img/trait2.png" alt="" style="margin: -8em -47em 0 0">
+                    <div class="square pair">
+                        <h2 class="chiffre">3</h2> 
+                        <h2 class="my-5">Recyclage</h2>
+                        <p>Une fois vos déchets récupérés dans une des poubelles CompostAll, nous nous occupons de trier les déchets dans notre centre afin qu’il finisse en compost ou bio-carburant.</p>
+                    </div>
                 </div>
-                <div class="col-xl-6 ms-auto">
-                    <h2>4. Partenariat</h2>
-                    <p>Une fois votre livraison validée, vous récupérerez des points sur votre compte partenaire et vous pouvez bénéficier d’avantage
-                        avec vos partenaires préférés.</p>
+                
+                <div class="col-xl-4 text-center">
+                    <img src="@/assets/img/trait3.png" alt="" style="margin-top: 13em">
+                </div>
+                <div class="col-xl-4 text-center" style="margin-top: 11em">
+                    <div class="square impair">
+                        <h2 class="chiffre">4</h2> 
+                        <h2 class="my-5">Partenariat</h2>
+                        <p>Une fois votre livraison validée, vous récupérerez des points sur votre compte partenaire et vous pouvez bénéficier d’avantage avec vos partenaires préférés.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,30 +105,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <h1 id="chiffres-title">Quelques chiffres clés</h1>
-            </div>
-        </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 chiffres-cles">
-            <div class="col col-md text-start">
-                <h3>20 Tonnes</h3>
-                <p class="">De nourritures gaspillées chaque minute en France</p>
-            </div>
-            <div class="col col-md text-start">
-                <h3>10 Millions</h3>
-                <p class="">De tonnes de déchets alimentaires en France</p>
-            </div>
-            <div class="col col-md text-start">
-                <h3>400 000 Tonnes</h3>
-                <p class="">De déchets alimentaires dans la restauration</p>
-            </div>
-            <div class="col col-md text-start">
-                <h3>1 Repas</h3>
-                <p class="">Par personne par semaine gaspillé</p>
-            </div>
-        </div>
     </div>
 </template>
 
@@ -141,6 +134,28 @@
         color: #96e6b3;
         font-weight: bold;
         font-size: 1.8em;
+    }
+
+    .square {
+        padding: 3em 2em;
+        border-radius: 15px;
+    }
+
+    .square.impair{
+        background-color: #96e6b3;
+        color: white;
+    }
+
+    .square.pair{
+        background-color: #fbfbfb;
+    }
+
+    .square.pair h2 {
+        color: #96e6b3;
+    }
+
+    .square .chiffre {
+        font-size: 4em;
     }
 
     #accordionProjet button {

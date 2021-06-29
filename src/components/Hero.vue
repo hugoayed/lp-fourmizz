@@ -3,11 +3,11 @@
     <div class="container-fluid p-3 pt-5" id="hero">
       <div class="container">
         <div class="row">
-          <div class="col-xl col-lg-12 w-auto mx-auto ">
-            <h1 class="fw-bold text-start d-none d-md-block" id="hero-title">
+          <div class="col-xl w-auto mx-auto ">
+            <h1 class="text-start d-none d-md-block" id="hero-title">
               Apprenons ensemble à changer le monde !
             </h1>
-            <h1 class="fw-bold text-start d-md-none" id="hero-title-mobile">
+            <h1 class="text-start d-md-none" id="hero-title-mobile">
               Apprenons ensemble à changer le monde !
             </h1>
           </div>
@@ -19,13 +19,23 @@
           </div>
         </div>
         <div class="row">
-          <p class="text-start text-dark mt-5" id="hero-intro">
-            Un monde avec moins de gaspillage nous fait rêver. Récuperer les
-            déchets des restaurants au lieu de les jeter nous fait avancer vers
-            ce rêve. Ensemble changeons le monde.
-          </p>
+          <div class="col-6">
+            <p class="text-start text-dark mt-5 lh-lg" id="hero-intro">
+              Un monde avec moins de gaspillage nous fait rêver. Récuperer les
+              déchets des restaurants au lieu de les jeter nous fait avancer vers
+              ce rêve. Ensemble changeons le monde.
+            </p>
+            <router-link to="#projet" class="text-decoration-none">
+              <p class="text-start fs-5 text-dark  my-5">
+                En savoir plus <img src="@/assets/img/chevron-right.svg" alt="Chevron droit" class="ms-2" style="max-width: 20px">
+              </p>
+            </router-link>
+          </div>
         </div>
-        <div class="row ">
+
+        <!-- CHAMP POUR LA NEWSLETTER -->
+
+        <!-- <div class="row ">
           <div class="col-xl-8 col-md-12">
             <form action="" class="text-start my-5" @submit.prevent="sendEmail">
               <input
@@ -40,13 +50,35 @@
                 Envoyer
               </button>
             </form>
-            <!-- ***** TEST ***** <br>
-            <a target="_blank" href="http://eepurl.com/hBHZlb">
-              <button class="btn text-start fw-bold btn-envoi">
-                S'abonner à la newsletter
-              </button>
-            </a> -->
           </div>
+        </div> -->
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 d-flex justify-content-between chiffres-cles mt-5 text-light">
+            <div class="col col-md">
+                <div class="card p-3">
+                  <h3 class="fs-1">20 Tonnes</h3>
+                  <p class="">De nourritures gaspillées chaque minute en France</p>
+                </div>
+                
+            </div>
+            <div class="col col-md ">
+                <div class="card p-3">
+                  <h3 class="fs-1">10 Millions</h3>
+                  <p class="">De tonnes de déchets alimentaires en France</p>
+                </div>
+            </div>
+            <div class="col col-md ">
+                <div class="card p-3" style="height: 100%">
+                  <h3 class="">400k Tonnes</h3>
+                  <p class="">De déchets alimentaires dans la restauration</p>
+                </div>
+            </div>
+            <div class="col col-md ">
+                <div class="card p-3">
+                  <h3 class="fs-1">1 Repas</h3>
+                  <p class="w-75 mx-auto">Par personne par semaine gaspillé</p>
+                </div>
+            </div>
         </div>
       </div>
     </div>
@@ -54,30 +86,6 @@
 </template>
 
 <style>
-#mc_embed_signup {
-  clear: left;
-  font: 14px Helvetica, Arial, sans-serif;
-  width: 100%;
-}
-/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-#mc-embedded-subscribe-form input[type="checkbox"] {
-  display: inline;
-  width: auto;
-  margin-right: 10px;
-}
-#mergeRow-gdpr {
-  margin-top: 20px;
-}
-#mergeRow-gdpr fieldset label {
-  font-weight: normal;
-}
-#mc-embedded-subscribe-form .mc_fieldset {
-  border: none;
-  min-height: 0px;
-  padding-bottom: 0px;
-}
-
 #hero {
   background-color: #fbfbfb;
 }
@@ -115,6 +123,24 @@
 
 #hero .btn-envoi:hover {
   background-color: #21e468;
+}
+
+.chiffres-cles .card {
+  background-color: #96e6b3;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.card p {
+  letter-spacing: 0.5px;
+}
+
+.card h3 {
+  font-size: 2.3em;
+  font-weight: 500;
 }
 
 @media (max-width: 576px) {
