@@ -24,15 +24,7 @@
           </p>
         </div>
         <div class="col-xl-6" style="min-height: 22em">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/PWgvGjAhvIw"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <img src="@/assets/img/preview-dashboard.png" alt="Preview tableau de bord" class="h-100">
         </div>
       </div>
     </div>
@@ -56,18 +48,18 @@
 }
 
 @media (max-width: 768px) {
-    #title {
-      font-size: 1.8em;
-    }
+  #title {
+    font-size: 1.8em;
+  }
 }
 
-@media(max-width: 1200px) {
-    iframe{
-        margin-top: 3em;
-    }
+@media (max-width: 1200px) {
+  iframe {
+    margin-top: 3em;
+  }
 
-    #title {
-      font-size: 3em;
-    }
+  #title {
+    font-size: 3em;
+  }
 }
 </style>

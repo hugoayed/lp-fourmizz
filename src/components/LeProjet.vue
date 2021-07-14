@@ -125,9 +125,10 @@
         <div class="col-12 col-lg-6" id="video">
           <iframe
             width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/RTptiP2QhN0"
+            height="90%"
+            src="https://www.youtube.com/embed/IJAEWYz4wfg"
             title="YouTube video player"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
