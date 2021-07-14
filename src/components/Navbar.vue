@@ -29,13 +29,23 @@
             >
           </li>
           <li class="nav-item mx-3">
+            <router-link to="/#about" class="nav-link text-dark"
+              >À Propos</router-link
+            >
+          </li>
+          <li class="nav-item mx-3">
             <router-link to="/#projet" class="nav-link text-dark"
               >Le Projet</router-link
             >
           </li>
           <li class="nav-item mx-3">
-            <router-link to="/#about" class="nav-link text-dark"
-              >À Propos</router-link
+            <router-link to="/coming-soon" class="nav-link text-dark"
+              >Abonnements</router-link
+            >
+          </li>
+          <li class="nav-item mx-3">
+            <router-link to="/coming-soon" class="nav-link text-dark"
+              >Boutique</router-link
             >
           </li>
           <li class="nav-item mx-3">
@@ -54,29 +64,31 @@
               Dashboard
             </a>
           </li>
+        </ul>
 
-          <li class="nav-item mx-3" v-if="loggedIn">
+        <ul class="navbar-nav" v-if="loggedIn">
+          <li class="nav-item mx-3">
             <button class="btn btn-light me-3" @click="signOut">
               Déconnexion
             </button>
           </li>
+        </ul>
 
-          <span v-else style="display: flex">
-            <li class="nav-item mx-3">
-              <router-link to="/login"
-                ><button class="btn btn-light me-3" type="submit">
-                  Connexion
-                </button></router-link
-              >
-            </li>
-            <li class="nav-item mx-3">
-              <router-link to="/register"
-                ><button class="btn btn-sign-up text-white fw-bold" type="submit">
-                  Inscription
-                </button></router-link
-              >
-            </li>
-          </span>
+        <ul class="navbar-nav" v-else style="display: flex">
+          <li class="nav-item mx-3">
+            <router-link to="/register"
+              ><button class="btn btn-sign-up text-white fw-bold" type="submit">
+                Inscription
+              </button></router-link
+            >
+          </li>
+          <li class="nav-item mx-3">
+            <router-link to="/login"
+              ><button class="btn btn-light me-3" type="submit">
+                Connexion
+              </button></router-link
+            >
+          </li>
         </ul>
       </div>
     </div>
@@ -137,6 +149,7 @@ export default {
 
 .btn-sign-up {
   background-color: #96e6b3;
+  /* background-color: #18E77F; */
 }
 
 .btn-sign-up:hover {

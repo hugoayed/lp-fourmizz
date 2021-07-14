@@ -1,7 +1,7 @@
 <template>
   <footer class="container-fluid pt-5" id="footer">
     <!-- FOOTER SUR ORDI -->
-    <div class="container d-none d-md-block">
+    <div class="container d-none d-xl-block">
       <div class="row ">
         <div class="col ">
           <img
@@ -34,7 +34,7 @@
           ></a>
           <a href="https://www.youtube.com/channel/UCH0UpF_aXlichdNgYxCXjPA" title="YouTube">
               <small>
-                  <img src="../assets/img/drive/Youtube.png" class="ms-4"/>
+                  <img src="../assets/img/drive/Youtube.png" alt="Logo YouTube" class="ms-4"/>
               </small>
           </a>
         </div>
@@ -62,17 +62,17 @@
           <h2 class="fs-4 fw-bold text-uppercase">Autres</h2>
           <ul class="ps-0 light">
             <li>
-              <router-link to="/#" class="nav-link ps-0"
+              <router-link to="/coming-soon" class="nav-link ps-0"
                 >Presse</router-link
               >
             </li>
             <li class="">
-              <router-link to="/#" class="nav-link ps-0"
+              <router-link to="/coming-soon" class="nav-link ps-0"
                 >Aide</router-link
               >
             </li>
             <li class="">
-              <router-link to="/#" class="nav-link ps-0"
+              <router-link to="/coming-soon" class="nav-link ps-0"
                 >Carrière</router-link
               >
             </li>
@@ -82,17 +82,17 @@
           <h2 class="fs-4 fw-bold text-uppercase">Mentions légales</h2>
           <ul class="ps-0 light">
             <li>
-              <router-link to="/#" class="nav-link ps-0"
+              <router-link to="/cgu" class="nav-link ps-0"
                 >Conditions générales d’utilisation</router-link
               >
             </li>
             <li class="">
-              <router-link to="/#" class="nav-link ps-0"
+              <router-link to="/confidentialite" class="nav-link ps-0"
                 >Politique de confidentialité</router-link
               >
             </li>
             <li class="">
-              <router-link to="/#" class="nav-link ps-0"
+              <router-link to="/cgu" class="nav-link ps-0"
                 >Utilisation de cookies</router-link
               >
             </li>
@@ -107,33 +107,8 @@
     </div>
 
     <!-- FOOTER SUR MOBILE -->
-    <div class="container d-md-none" id="footer-mobile">
+    <div class="container d-xl-none" id="footer-mobile">
       <div class="row">
-        <div class="col">
-          <h2 class="text-start text-light">
-            Agis pour l’environnement, <br />
-            Souscris à notre abonnement !
-          </h2>
-          <form
-            action=""
-            id="hero-form-mobile"
-            class="d-flex justify-content-start mt-4"
-            @submit.prevent="sendEmail"
-          >
-            <input
-              class="align-middle w-75 fs-4 email"
-              type="email"
-              placeholder="Adresse mail"
-              name="user_email"
-              autocomplete="off"
-            />
-            <button class="btn align-middle fw-bold btn-envoi" type="submit">
-              Envoyer
-            </button>
-          </form>
-        </div>
-      </div>
-      <div class="row mt-5">
         <div class="col">
           <a href="https://www.linkedin.com/company/compostall"
             ><small
@@ -154,6 +129,11 @@
                 src="../assets/img/compost-all-instagram.png"
                 alt="Logo Instagram"/></small
           ></a>
+          <a href="https://www.youtube.com/channel/UCH0UpF_aXlichdNgYxCXjPA" title="YouTube">
+              <small>
+                  <img src="../assets/img/drive/Youtube.png" alt="Logo YouTube" class="ms-4"/>
+              </small>
+          </a>
         </div>
       </div>
       <div class="row mt-5">
@@ -174,13 +154,13 @@ a {
   color: white;
 }
 
-a:hover {
+a:hover, a:focus {
   color: white;
 }
 
 #footer {
   background-color: dimgray;
-  margin-top: 4em;
+  /* margin-top: 4em; */
   padding: 2em;
 }
 

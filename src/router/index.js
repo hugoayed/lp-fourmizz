@@ -30,7 +30,21 @@ const routes = [
         path:'/mentions-legales',
         name: 'MentionsLegales',
         components: {
-            default: () => import(/* webpackChunkName: "Mentionslegales" */ '@/views/MentionsLegales.vue'),
+            default: () => import(/* webpackChunkName: "Mentionslegales" */ '@/views/Legal/MentionsLegales.vue'),
+        },
+    },
+    {
+        path:'/confidentialite',
+        name: 'Confidentialite',
+        components: {
+            default: () => import(/* webpackChunkName: "Confidentialite" */ '@/views/Legal/Confidentialite.vue'),
+        },
+    },
+    {
+        path:'/cgu',
+        name: 'CGU',
+        components: {
+            default: () => import(/* webpackChunkName: "Cookies" */ '@/views/Legal/CGU.vue'),
         },
     },
     {
@@ -41,6 +55,20 @@ const routes = [
         },
         meta: {
             requiresAuth: true,
+        },
+    },
+    {
+        path:'/onboarding',
+        name: 'Onboarding',
+        components: {
+            default: () => import(/* webpackChunkName: "Onboarding" */ '@/views/Onboarding.vue'),
+        },
+    },
+    {
+        path:'/coming-soon',
+        name: 'CommingSoon',
+        components: {
+            default: () => import(/* webpackChunkName: "CommingSoon" */ '@/views/ComingSoon.vue'),
         },
     },
 ]

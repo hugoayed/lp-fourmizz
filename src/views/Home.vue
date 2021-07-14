@@ -2,22 +2,25 @@
     <section id="content">
       <router-view></router-view>
       <Hero />
-      <LeProjet />
       <APropos />
+      <Solution />
+      <LeProjet />
     </section>
 </template>
 
 <script>
   import Hero from '@/components/Hero.vue'
-  import LeProjet from '@/components/LeProjet.vue'
   import APropos from '@/components/APropos.vue'
+  import LeProjet from '@/components/LeProjet.vue'
+  import Solution from '@/components/Solution.vue'
 
   export default {
     name: 'Home',
     components: {
       Hero,
       LeProjet,
-      APropos
+      APropos,
+      Solution
     }
   }
 </script>

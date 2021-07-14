@@ -1,134 +1,98 @@
 <template>
-  <div class="login-page">
-    <h1 class="my-4">Connectez-vous</h1>
-    <div class="form">
-      <div class="danger" v-if="error">{{ error.message }}</div>
-      <form class="login-form" @submit.prevent="submit">
-        <input
-          type="email"
-          placeholder="Adresse e-mail"
-          v-model="email"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Mot de passe"
-          v-model="password"
-          required
-        />
-        <button type="submit">Connexion</button>
-        <p class="message">
-          Pas de compte ?
-          <router-link to="/register"> Créez-en un !</router-link>
-        </p>
-      </form>
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 text-start my-auto" id="leftCol">
+          <h1 id="title">Me connecter</h1>
+          <form @submit.prevent="submit">
+            <label for="name">Email</label>
+            <input
+              type="email"
+              name="name"
+              v-model="email"
+              placeholder="fourmizz.agency@gmail.com"
+              required
+            />
+
+            <label for="name">Mot de passe</label>
+            <input
+              type="password"
+              name="name"
+              v-model="password"
+              placeholder="********"
+              required
+            />
+
+            <button type="submit" class="mt-4">Créer mon compte</button>
+          </form>
+
+          <p class="mt-3">
+            Vous n'avez pas de compte ?
+            <router-link to="/login"> Inscrivez-vous !</router-link>
+          </p>
+        </div>
+        <div class="col-6 p-5 d-grid " id="rightCol">
+          <img
+            src="@/assets/img/drive/Logo Footer.png"
+            alt="Logo CompostAll"
+            class="mx-auto w-50"
+          />
+          <img
+            src="@/assets/img/compost-all-hero.png"
+            alt="Compost All - illustration avec des fruits et légumes"
+            class="mx-auto"
+          />
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+#rightCol {
+  background-color: #96e6b3;
+  min-height: 90vh;
+}
 
-.login-page {
-  width: 360px;
-  padding: 1% 0 1%;
-  margin: auto;
+#leftCol {
+  padding: 3em 17em;
 }
-.form {
-  position: relative;
-  z-index: 1;
-  background: #ffffff;
-  max-width: 360px;
-  margin: 0 auto 100px ;
-  padding: 45px;
-  text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+#title {
+  color: #6b6b6b;
+  font-weight: 600;
+  font-size: 2.5em;
 }
-.form input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
+
+form {
+  display: grid;
 }
-.form button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #96e6b3;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #ffffff;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
+
+form input {
+  margin-bottom: 1em;
+  border: 1px solid #a5a5a5;
+  border-radius: 15px;
+  padding: 1em;
 }
-.form button:hover,
-.form button:active,
-.form button:focus {
-  background: #21e468;
+
+form button {
+  background-color: #96e6b3;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 1em;
+  border: none;
+  border-radius: 15px;
 }
-.form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
+
+form button:hover {
+  background-color: #21e468;
 }
-.form .message a {
-  color: #4caf50;
+
+a {
+  color: #96e6b3;
   text-decoration: none;
-}
-.form .register-form {
-  display: none;
-}
-.container {
-  position: relative;
-  z-index: 1;
-  max-width: 300px;
-  margin: 0 auto;
-}
-.container:before,
-.container:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.container .info {
-  margin: 50px auto;
-  text-align: center;
-}
-.container .info h1 {
-  margin: 0 0 15px;
-  padding: 0;
-  font-size: 36px;
-  font-weight: 300;
-  color: #1a1a1a;
-}
-.container .info span {
-  color: #4d4d4d;
-  font-size: 12px;
-}
-.container .info span a {
-  color: #000000;
-  text-decoration: none;
-}
-.container .info span .fa {
-  color: #ef3b3a;
-}
-body {
-  background: #76b852; /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, #76b852, #8dc26f);
-  background: -moz-linear-gradient(right, #76b852, #8dc26f);
-  background: -o-linear-gradient(right, #76b852, #8dc26f);
-  background: linear-gradient(to left, #76b852, #8dc26f);
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
 }
 </style>
 
@@ -153,7 +117,6 @@ export default {
     return {
       email: "",
       password: "",
-      error: "",
     };
   },
 };

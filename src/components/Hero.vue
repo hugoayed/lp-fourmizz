@@ -1,17 +1,16 @@
 <template>
-  <section id="content">
-    <div class="container-fluid p-3 pt-5" id="hero">
+  <section>
+    <div class="container-fluid p-3 pt-5 bg-light" id="hero">
       <div class="container">
         <div class="row">
           <div class="col-xl w-auto mx-auto ">
-            <h1 class="text-start d-none d-md-block" id="hero-title">
-              Apprenons ensemble à changer le monde !
+            <h1 class="text-start " id="hero-title">
+              Une place pour gérer toutes vos problématiques liés aux biodéchets
             </h1>
-            <h1 class="text-start d-md-none" id="hero-title-mobile">
-              Apprenons ensemble à changer le monde !
-            </h1>
+
+            <h3 class="mt-5 hero-subtitle">Ensemble faisons la guerre contre le gaspillage</h3>
           </div>
-          <div class="col-lg w-auto mx-auto d-none d-xl-block">
+          <div class="col-lg w-auto d-none d-lg-block mx-auto mt-5 mb-2">
             <img
               src="../assets/img/compost-all-hero.png"
               alt="Compost All - illustration avec des fruits et légumes"
@@ -19,15 +18,21 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-6">
-            <p class="text-start text-dark mt-5 lh-lg" id="hero-intro">
+          <div class="col-xl-6">
+            <p class="text-start text-dark lh-lg" id="hero-intro">
               Un monde avec moins de gaspillage nous fait rêver. Récuperer les
-              déchets des restaurants au lieu de les jeter nous fait avancer vers
-              ce rêve. Ensemble changeons le monde.
+              déchets des restaurants au lieu de les jeter nous fait avancer
+              vers ce rêve. Ensemble changeons le monde.
             </p>
             <router-link to="#projet" class="text-decoration-none">
-              <p class="text-start fs-5 text-dark  my-5">
-                En savoir plus <img src="@/assets/img/chevron-right.svg" alt="Chevron droit" class="ms-2" style="max-width: 20px">
+              <p class="text-start fs-5  my-5" id="economies">
+                Je veux calculer mes économies
+                <!-- <img
+                  src="@/assets/img/chevron-right.svg"
+                  alt="Chevron droit"
+                  class="ms-2"
+                  style="max-width: 20px"
+                /> -->
               </p>
             </router-link>
           </div>
@@ -53,32 +58,33 @@
           </div>
         </div> -->
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 d-flex justify-content-between chiffres-cles mt-5 text-light">
-            <div class="col col-md">
-                <div class="card p-3">
-                  <h3 class="fs-1">20 Tonnes</h3>
-                  <p class="">De nourritures gaspillées chaque minute en France</p>
-                </div>
-                
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-4 d-flex justify-content-between chiffres-cles mt-5 text-light"
+        >
+          <div class="col col-md mt-4 mt-lg-0 ">
+            <div class="card p-3 h-100">
+              <h2 class="fs-1">20 Tonnes</h2>
+              <p class="">De nourritures gaspillées chaque minute en France</p>
             </div>
-            <div class="col col-md ">
-                <div class="card p-3">
-                  <h3 class="fs-1">10 Millions</h3>
-                  <p class="">De tonnes de déchets alimentaires en France</p>
-                </div>
+          </div>
+          <div class="col col-md mt-4 mt-lg-0 ">
+            <div class="card p-3 h-100">
+              <h2 class="fs-1">10 Millions</h2>
+              <p class="">De tonnes de déchets alimentaires en France</p>
             </div>
-            <div class="col col-md ">
-                <div class="card p-3" style="height: 100%">
-                  <h3 class="">400k Tonnes</h3>
-                  <p class="">De déchets alimentaires dans la restauration</p>
-                </div>
+          </div>
+          <div class="col col-md mt-4 mt-lg-0 ">
+            <div class="card p-3 h-100">
+              <h2 class="">400k Tonnes</h2>
+              <p class="">De déchets alimentaires dans la restauration</p>
             </div>
-            <div class="col col-md ">
-                <div class="card p-3">
-                  <h3 class="fs-1">1 Repas</h3>
-                  <p class="w-75 mx-auto">Par personne par semaine gaspillé</p>
-                </div>
+          </div>
+          <div class="col col-md mt-4 mt-lg-0 ">
+            <div class="card p-3 h-100">
+              <h2 class="fs-1">1 Repas</h2>
+              <p class="w-75 mx-auto">Par personne par semaine gaspillé</p>
             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -90,19 +96,25 @@
   background-color: #fbfbfb;
 }
 
-#hero .d-md-none {
-  font-size: 1.8em;
-}
-
 #hero-title,
 #hero-title-mobile {
-  font-size: 5em;
+  font-size: 4em;
   color: #96e6b3;
 }
 
+.hero-subtitle {
+  font-weight: 600;
+  color: #5f5f5f;
+}
+
 #hero-intro {
-  font-size: 1.2em;
+  font-size: 0.92em;
   color: #525252;
+}
+
+#economies {
+  color: #96e6b3;
+  font-weight: 600;
 }
 
 #hero-email {
@@ -127,6 +139,7 @@
 
 .chiffres-cles .card {
   background-color: #96e6b3;
+  /* background-color: #18E77F; */
   border: none;
   border-radius: 15px;
   color: white;
@@ -138,12 +151,12 @@
   letter-spacing: 0.5px;
 }
 
-.card h3 {
+.card h2 {
   font-size: 2.3em;
   font-weight: 500;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   #hero-email {
     background-color: #fff;
     font-size: 1em !important;
@@ -152,6 +165,20 @@
 
   #hero .btn-envoi {
     font-size: 0.9em;
+  }
+  .card h2 {
+    font-size: calc(1.325rem + 0.9vw);
+    font-weight: 500;
+  }
+
+  #hero-title {
+  font-size: 2.2em;
+  }
+}
+
+@media (max-width: 500px) {
+  #hero-title {
+  font-size: 1.8em;
   }
 }
 </style>

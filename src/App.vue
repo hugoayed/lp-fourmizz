@@ -28,5 +28,6 @@
   text-align: center;
   color: #2c3e50;
   min-width: fit-content;
+  min-width: 100vw;
 }
 </style>
