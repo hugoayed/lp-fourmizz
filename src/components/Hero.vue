@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container-fluid p-3 pt-5 bg-light" id="hero">
+    <div class="container-fluid p-3 pt-5" id="hero">
       <div class="container">
         <div class="row">
           <div class="col-xl w-auto mx-auto ">

@@ -33,7 +33,7 @@
         </div>
         <div class="col-6 p-5 d-grid " id="rightCol">
           <img
-            src="@/assets/img/drive/Logo Footer.png"
+            src="@/assets/img/big-logo-compost-all-white.png"
             alt="Logo CompostAll"
             class="mx-auto w-50"
           />

@@ -6,7 +6,7 @@
       </div>
     </div>
 
-    <div class="row d-flex align-items-center p-5 bg-light">
+    <div class="row d-flex align-items-center p-5" id="bg-light">
       <div class="col-12 col-lg-7">
         <h2>Qui sommes-nous ?</h2>
         <p class="lh-lg mt-4">
@@ -43,8 +43,8 @@
       </div>
     </div>
 
-    <div class="row d-flex align-items-center bg-light p-5">
-      <div class="col-12 col-lg-7 ">
+    <div class="row d-flex align-items-center p-5" id="bg-light">
+      <div class="col-12 col-lg-7">
         <h2>Nos valeurs</h2>
         <p class="">
           CompostAll est fidèle à ses valeurs de respect de l’environnement et
@@ -88,6 +88,10 @@
 
 #about .align-items-center {
   margin: 3em 0;
+}
+
+#bg-light {
+  background-color: #fbfbfb;
 }
 
 @media (max-width: 768px) {

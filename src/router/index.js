@@ -71,6 +71,13 @@ const routes = [
             default: () => import(/* webpackChunkName: "CommingSoon" */ '@/views/ComingSoon.vue'),
         },
     },
+    {
+        path:'/inscription-ok',
+        name: 'InscriptionOk',
+        components: {
+            default: () => import(/* webpackChunkName: "CommingSoon" */ '@/views/Inscription-ok.vue'),
+        },
+    },
 ]
 
 const router = new VueRouter({

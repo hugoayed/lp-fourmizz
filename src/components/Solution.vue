@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-light">
+  <section id="our-solution">
     <div class="container p-5">
       <div class="row">
         <div class="col">
@@ -40,6 +40,10 @@
 </template>
 
 <style>
+#our-solution {
+  background-color: #fbfbfb;
+}
+
 #title {
   font-weight: bold;
   font-size: 4em;
@@ -51,9 +55,19 @@
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+    #title {
+      font-size: 1.8em;
+    }
+}
+
 @media(max-width: 1200px) {
     iframe{
         margin-top: 3em;
+    }
+
+    #title {
+      font-size: 3em;
     }
 }
 </style>
